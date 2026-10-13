@@ -8,31 +8,33 @@ int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    // ----------------- Задание 1 -----------------
+    // text sdelal na angl tak kak github ne vosprinimaet russkiy
 
-    cout << "----------------- Задание 1 -----------------\n";
+    // ----------------- Zadanie 1 -----------------
+
+    cout << "----------------- Zadanie 1 -----------------\n";
     double rast, vremya, speed;
 
-    cout << "Введите расстояние до аэропорта (км): ";
+    cout << "Vvedite rastoyanie do aeroporta (km): ";
     cin >> rast;
-    cout << "Введите время в пути (часы): ";
+    cout << "Vvedite vremya v puti (hours): ";
     cin >> vremya;
 
     speed = rast / vremya;
 
-    cout << "Нужно ехать со скоростью: " << speed << " км/ч\n";
+    cout << "Nuzhno ehat so skorostyu: " << speed << " km/h\n";
 
-    // ----------------- Задание 2 -----------------
+    // ----------------- Zadanie 2 -----------------
 
     Sleep(2000);
     system("cls");
-    cout << "----------------- Задание 2 -----------------\n";
-    int h1, m1, s1, h2, m2, s2; // часы минуты секунды
+    cout << "----------------- Zadanie 2 -----------------\n";
+    int h1, m1, s1, h2, m2, s2; // chasy minuty sekundy
     const double cena = 2;
 
-    cout << "Введите время начала (часы минуты секунды): ";
+    cout << "Vvedite vremya nachala (chasy minuty sekundy): ";
     cin >> h1 >> m1 >> s1;
-    cout << "Введите время завершения (часы минуты секунды): ";
+    cout << "Vvedite vremya zaversheniya (chasy minuty sekundy): ";
     cin >> h2 >> m2 >> s2;
 
     int start = h1 * 3600 + m1 * 60 + s1;
@@ -45,48 +47,48 @@ int main() {
     double minuti = (finish - start) / 60.0;
     double stoimost = minuti * cena;
 
-    cout << "Время поездки: " << minuti << " мин\n";
-    cout << "Стоимость поездки: " << stoimost << " грн\n";
+    cout << "Vremya poezdki: " << minuti << " min\n";
+    cout << "Stoimost poezdki: " << stoimost << " grn\n";
 
-    // ----------------- Задание 3 -----------------
+    // ----------------- Zadanie 3 -----------------
 
     Sleep(2000);
     system("cls");
-    cout << "----------------- Задание 3 -----------------\n";
+    cout << "----------------- Zadanie 3 -----------------\n";
     double km, rashod, benz92, benz95, benz98;
 
-    cout << "Введите расстояние (км): ";
+    cout << "Vvedite rastoyanie (km): ";
     cin >> km;
-    cout << "Введите расход бензина на 100 км (л): ";
+    cout << "Vvedite rashod benzina na 100 km (l): ";
     cin >> rashod;
-    cout << "Введите стоимость 1 литра бензина А-92: ";
+    cout << "Vvedite stoimost 1 litra benzina A-92: ";
     cin >> benz92;
-    cout << "Введите стоимость 1 литра бензина А-95: ";
+    cout << "Vvedite stoimost 1 litra benzina A-95: ";
     cin >> benz95;
-    cout << "Введите стоимость 1 литра бензина А-98: ";
+    cout << "Vvedite stoimost 1 litra benzina A-98: ";
     cin >> benz98;
 
     double litri = km / 100 * rashod;
 
     cout << "\n";
-    cout << "Бензин\t\tЦена за литр\tЛитров\t\tСтоимость поездки\n";
-    cout << "А-92\t\t" << benz92 << "\t\t" << litri << "\t\t" << litri * benz92 << "\n";
-    cout << "А-95\t\t" << benz95 << "\t\t" << litri << "\t\t" << litri * benz95 << "\n";
-    cout << "А-98\t\t" << benz98 << "\t\t" << litri << "\t\t" << litri * benz98 << "\n";
+    cout << "Benzin\t\tCena za litr\tLitrov\t\tStoimost poezdki\n";
+    cout << "A-92\t\t" << benz92 << "\t\t" << litri << "\t\t" << litri * benz92 << "\n";
+    cout << "A-95\t\t" << benz95 << "\t\t" << litri << "\t\t" << litri * benz95 << "\n";
+    cout << "A-98\t\t" << benz98 << "\t\t" << litri << "\t\t" << litri * benz98 << "\n";
 
     Sleep(2000);
     system("cls");
 
     while (true) {
-        cout << "----------------- Калькулятор -----------------\n";
+        cout << "----------------- Calculator -----------------\n";
         double num1, num2;
         char deystvie;
 
-        cout << "Введите первое число: ";
+        cout << "Vvedite pervoe chislo: ";
         cin >> num1;
-        cout << "Введите действие (+, -, *, /): ";
+        cout << "Vvedite deystvie (+, -, *, /): ";
         cin >> deystvie;
-        cout << "Введите второе число: ";
+        cout << "Vvedite vtoroe chislo: ";
         cin >> num2;
 
         if (deystvie == '+') {
@@ -100,18 +102,18 @@ int main() {
         }
         else if (deystvie == '/') {
             if (num2 == 0) {
-                cout << "Ошибка: на ноль делить нельзя!\n";
+                cout << "Oshibka: na nol delit nelzya!\n";
             }
             else {
                 cout << num1 << " / " << num2 << " = " << num1 / num2 << "\n";
             }
         }
         else {
-            cout << "Ошибка: неизвестное действие!\n";
+            cout << "Oshibka: neizvestnoe deystvie!\n";
         }
 
         int again;
-        cout << "\nВоспользоваться калькулятором ещё раз? (1 - да, 0 - нет): ";
+        cout << "\nVospolzovatsya kalkulyatorom eshche raz? (1 - da, 0 - net): ";
         cin >> again;
 
         if (again != 1) {
